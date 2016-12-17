@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" onAction="#draw" text="Рисуй" />
+            <Button mnemonicParsing="false" onAction="#moveXplus" text="-&gt;" />
+            <Button mnemonicParsing="false" onAction="#moveXminus" text="&lt;-" />
+            <Button mnemonicParsing="false" onAction="#rotateXplus" text="Rx+" />
+            <Button mnemonicParsing="false" onAction="#rotateYplus" text="Ry+" />
+            <ColorPicker fx:id="cp" onAction="#draw" />
+            <Button onAction="#focusPlus" mnemonicParsing="false" text="F+" />
+            <Button onAction="#focusMinus" mnemonicParsing="false" text="F-" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <Pane fx:id="pane" prefHeight="560.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Canvas fx:id="canvas" height="560.0" width="800.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
